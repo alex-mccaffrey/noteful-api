@@ -23,4 +23,23 @@ const notes = [
   },
 ];
 
-module.exports = { notes };
+const folders = [
+    {
+        id: 1,
+        name: "Important"
+      },
+      {
+        id: 2,
+        name: "Super"
+      },
+      {
+        id: 3,
+        name: "ToDo",
+      },
+      {
+        id: 4,
+        name: "Work",
+      },
+]
+
+module.exports = { notes, folders };

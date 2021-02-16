@@ -21,15 +21,11 @@ describe("Notes Endpoints", () => {
 
   afterEach("cleanup", () => db("noteful_notes").truncate());
 
-  // TODO: refactor to use db when updating POST and DELETE
   beforeEach("copy the notes", () => {
-    // copy the notes so we can restore them after testing
     notesCopy = store.notes.slice();
   });
 
-  // TODO: refactor to use db when updating POST and DELETE
   afterEach("restore the notes", () => {
-    // restore the notes back to original
     store.notes = notesCopy;
   });
 
@@ -319,7 +315,7 @@ describe("Notes Endpoints", () => {
           .send({ irrelevantField: "foo" })
           .expect(400, {
             error: {
-              message: `Request body must content either 'name', 'folder_id', 'content'`,
+              message: `Request body must contain either 'name', 'folder_id', 'content'`,
             },
           });
       });

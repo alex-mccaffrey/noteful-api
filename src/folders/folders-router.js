@@ -29,7 +29,7 @@ foldersRouter
         for (const [key, value] of Object.entries(newFolder))
         if (value == null)
         return res.status(400).json({
-            error: { message: `Missing ${key} in request body` },
+            error: { message: `Missing '${key}' in request body` },
         });
         FoldersService.insertFolder(req.app.get('db'), newFolder)
         .then((folder) => {
@@ -48,7 +48,7 @@ foldersRouter
         .then((folder) => {
         if (!folder) {
             return res.status(404).json({
-                error: { message: `Folder doesn't exists` },
+                error: { message: `Folder doesn't exist` },
             });
         }
         res.folder = folder; 
