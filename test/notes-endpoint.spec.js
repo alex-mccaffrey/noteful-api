@@ -4,7 +4,7 @@ const app = require("../src/app");
 const store = require("../src/store");
 const supertest = require("supertest");
 
-describe("Notes Endpoints", () => {
+describe.only("Notes Endpoints", () => {
   let notesCopy, db;
 
   before("make knex instance", () => {
@@ -76,7 +76,7 @@ describe("Notes Endpoints", () => {
     context("Given there are notes in the database", () => {
       const testNotes = makeNotesArray();
       beforeEach("insert notes", () => {
-        return db.into("noteful_notes").insert(testNotes);
+        return db.into("noteful_notes").insert(testNotes)
       });
 
       it("gets the notes from the store", () => {

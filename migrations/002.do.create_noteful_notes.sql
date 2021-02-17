@@ -6,3 +6,4 @@ CREATE TABLE noteful_notes (
         REFERENCES noteful_folders(id) ON DELETE CASCADE NOT NULL,
     content TEXT NOT NULL
 );
+

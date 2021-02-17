@@ -190,24 +190,6 @@ describe("Folders Endpoints", () => {
             .expect(res.body)
         );
     });
-
-    /*context(`Given an XSS attack folder`, () => {
-      const { maliciousFolder, expectedFolder } = makeMaliciousFolder();
-
-      beforeEach("insert malicious folder", () => {
-        return db.into("noteful_folders").insert([maliciousFolder]);
-      });
-
-      it("removes XSS attack content", () => {
-        return supertest(app)
-          .get(`/api/folder/${maliciousFolder.id}`)
-          .set("Authorization", `Bearer ${process.env.API_TOKEN}`)
-          .expect(200)
-          .expect((res) => {
-            expect(res.body.name).to.eql(expectedFolder.name);
-          });
-      });
-    });*/
   });
 
   describe(`PATCH /api/folders/:folder_id`, () => {
