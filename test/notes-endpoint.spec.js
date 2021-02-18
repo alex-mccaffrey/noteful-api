@@ -4,7 +4,7 @@ const app = require("../src/app");
 const store = require("../src/store");
 const supertest = require("supertest");
 
-describe.only("Notes Endpoints", () => {
+describe("Notes Endpoints", () => {
   let notesCopy, db;
 
   before("make knex instance", () => {
