@@ -3,4 +3,4 @@ VALUES
   ('Important'),
   ('Groceries'),
   ('To-Dos'),
-  ('Work')
+  ('Work');
