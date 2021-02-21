@@ -1,1 +1,0 @@
-ALTER TABLE noteful_notes ALTER COLUMN folder_id ON DELETE SET NULL;
