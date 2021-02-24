@@ -8,3 +8,7 @@ Noteful is a simple yet fully featured note taking application. It has been deve
 
 ##Client
 The frontend repo and README with examples can be seen <a href="https://github.com/amccaff20/noteful-client/blob/main/README.md" target="_blank">here</a>.
+
+
+##Technology Used
+Th backend for this project uses Nodejs, Express, Postresql, with both the server and database being deployed to Heroku.
